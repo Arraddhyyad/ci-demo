@@ -10,3 +10,6 @@ def test_zero_uptake():
 def test_bad_uptake():
     with pytest.raises(ValueError):
         budget_impact(1000, 5000, 1.5)
+
+def test_full_uptake():
+    assert budget_impact(100, 1000, 1) == 100000.0
